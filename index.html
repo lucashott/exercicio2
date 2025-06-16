@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio - Lucas Hot</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+      gap: 60px;
+      min-height: 90vh;
+      animation: fadeIn 1s ease-in;
+    }
+
+    #intro {
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+      text-align: left;
+    }
+
+    #intro p {
+      margin: 0;
+      font-size: 1.4rem;
+      animation: slideInLeft 1s ease-out;
+    }
+
+    #intro p span {
+      font-weight: bold;
+      color: rgb(187, 0, 255);
+    }
+
+    #intro h2 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    #redes-sociais {
+      display: flex;
+      gap: 15px;
+      margin: 10px 0;
+    }
+
+    #redes-sociais img {
+      width: 40px;
+      height: 40px;
+      transition: transform 0.3s ease;
+    }
+
+    #redes-sociais img:hover {
+      transform: scale(1.2);
+    }
+
+    .botao-sobre {
+      background-color: black;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .botao-sobre:hover {
+      background-color: #333;
+      transform: scale(1.05);
+    }
+
+    #img-dev img {
+      width: 350px;
+      max-width: 90vw;
+      animation: fadeIn 1.5s ease-in;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      #intro {
+        align-items: center;
+        text-align: center;
+      }
+
+      #redes-sociais {
+        justify-content: center;
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Portfólio</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre Mim</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div id="intro">
+      <p>Olá, seja bem-vindo(a) ao meu portfólio!</p>
+      <h2>Meu nome é <span>Lucas Hot</span> e eu sou um desenvolvedor web</h2>
+
+      <div id="redes-sociais">
+        <a href="https://github.com/lucashott" target="_blank">
+          <img src="imagens/icons8-github-50.png" alt="GitHub">
+        </a>
+        <a href="https://www.linkedin.com/in/lucas-hot-b44a6b36a/" target="_blank">
+          <img src="imagens/icons8-linkedin-50.png" alt="LinkedIn">
+        </a>
+        <a href="https://x.com/lukashot" target="_blank">
+          <img src="imagens/novo-design-de-icone-x-do-logotipo-do-twitter-em-2023_1017-45418.avif" alt="Twitter">
+        </a>
+      </div>
+
+      <button class="botao-sobre" onclick="location.href='sobre.html'">Conheça mais sobre mim</button>
+    </div>
+
+    <div id="img-dev">
+      <img src="imagens/grapy-software-developer-coding-with-two-monitors.png" alt="Desenvolvedor Web Ilustração">
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Lucas Hot. Todos os direitos reservados.</p>
+  </footer>
+
+</body>
+</html>
